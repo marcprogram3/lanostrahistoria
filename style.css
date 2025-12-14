@@ -1,0 +1,172 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #fff5f5, #ffebee);
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding-bottom: 120px;
+}
+
+header {
+    text-align: center;
+    padding: 80px 20px 50px;
+    background: url('img/foto-barrasuperior.jpeg') center/contain no-repeat;
+    background-color: #ffebee;
+    color: white;
+    text-shadow: 0 0 20px rgba(0,0,0,0.9);
+}
+
+header h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.subtitle { font-size: 1.4rem; font-style: italic; }
+
+.galeria {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.galeria img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    transition: transform 0.4s;
+}
+
+.galeria img:hover { transform: scale(1.07); }
+
+.pdf-section {
+    text-align: center;
+    padding: 50px 20px 80px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.pdf-section h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.8rem;
+    color: #c2185b;
+    margin-bottom: 15px;
+}
+
+.nota {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+.pdf-container {
+    width: 92%;
+    max-width: 950px;
+    height: 70vh;
+    min-height: 500px;
+    margin: 0 auto;
+    border: 10px solid #c2185b;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    background: white;
+}
+
+.pdf-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: white;
+    transform: scale(1.05);
+    transform-origin: top left;
+}
+
+.playlist-section {
+    text-align: center;
+    padding: 60px 20px 120px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.playlist-section h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.8rem;
+    color: #c2185b;
+    margin-bottom: 15px;
+}
+
+.spotify-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+    border: 10px solid #c2185b;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(194, 24, 91, 0.98);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.3rem;
+    font-style: italic;
+    z-index: 9999;
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.2);
+}
+
+/* ADAPTACIÓ PER MÒBILS I TAULETES */
+@media (max-width: 768px) {
+    header {
+        padding: 60px 15px 40px;
+        background-size: contain;
+    }
+    header h1 { font-size: 2.8rem; }
+    .subtitle { font-size: 1.2rem; }
+
+    .galeria img {
+        width: 90%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .pdf-section h2, .playlist-section h2 { font-size: 2.4rem; }
+
+    .pdf-container {
+        width: 96%;
+        height: 60vh;
+        min-height: 450px;
+        border-width: 8px;
+    }
+    .pdf-container iframe { transform: scale(1.03); }
+
+    .spotify-container {
+        width: 96%;
+        border-width: 8px;
+    }
+
+    footer {
+        font-size: 1.1rem;
+        padding: 18px;
+        position: fixed;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 { font-size: 2.4rem; }
+    .pdf-container { height: 55vh; }
+}
