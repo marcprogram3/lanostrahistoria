@@ -12,7 +12,7 @@ body {
 header {
     text-align: center;
     min-height: 80vh;
-    background: url('img/foto-barrasuperior.jpeg') center/cover no-repeat;
+    background: url('img/foto-barrasuperior.jpg') center/cover no-repeat;
     background-color: #ffebee;
     color: white;
     text-shadow: 0 0 25px rgba(0,0,0,0.9);
