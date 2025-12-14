@@ -112,12 +112,13 @@ footer {
     z-index: 9999;
 }
 
+/* AJUST PER MÒBILS: imatge cobreix tot sense tallar els ulls */
 @media (max-width: 768px) {
     header {
         min-height: 70vh;
-        background-size: contain;
-        background-position: center center;
-        background-color: #ffebee;
+        background-size: cover;            /* cobreix tota la pantalla */
+        background-position: center 20%;   /* baixa una mica els ulls per centrar-los bé */
+        background-color: transparent;    /* sense fons rosa extra */
         padding: 40px 15px;
     }
 
