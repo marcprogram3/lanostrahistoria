@@ -10,22 +10,22 @@ body {
 }
 
 header {
+    position: relative;
     text-align: center;
-    padding: 120px 20px;
+    min-height: 100vh;                  /* ocupa tota la pantalla en mòbil */
     background: url('img/foto-barrasuperior.jpeg') center/cover no-repeat;
     background-attachment: fixed;
     color: white;
     text-shadow: 0 0 25px rgba(0,0,0,0.9);
-    min-height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 20px;
 }
 
 header h1 {
     font-family: 'Dancing Script', cursive;
     font-size: 4.5rem;
-    margin-bottom: 10px;
 }
 
 .subtitle { 
@@ -114,17 +114,17 @@ footer {
     z-index: 9999;
 }
 
-/* MILLORA PER MÒBILS */
+/* CANVIS CLAUS PER MÒBILS */
 @media (max-width: 768px) {
     header {
-        min-height: 60vh;
-        padding: 80px 15px;
-        background-size: cover;        /* ocupa tota la pantalla */
+        min-height: 80vh;               /* ocupa gairebé tota la pantalla */
+        padding: 40px 15px;
+        background-size: cover;
         background-position: center;
     }
 
-    header h1 { font-size: 3rem; }
-    .subtitle { font-size: 1.4rem; }
+    header h1 { font-size: 3.2rem; }
+    .subtitle { font-size: 1.5rem; }
 
     .galeria img {
         width: 90%;
@@ -137,28 +137,21 @@ footer {
     .pdf-container {
         width: 96%;
         height: 70vh;
-        min-height: 500px;
         border-width: 8px;
     }
 
-    /* Zoom perfecte per llegir sense moure horitzontalment */
+    /* Zoom més fort perquè el text del PDF es vegi complet sense moure horitzontalment */
     .pdf-container iframe {
-        transform: scale(1.15);
-        transform-origin: top left;
+        transform: scale(1.35);
+        transform-origin: top center;
     }
 
-    .spotify-container {
-        width: 96%;
-        border-width: 8px;
-    }
+    .spotify-container { width: 96%; border-width: 8px; }
 
-    footer {
-        font-size: 1.2rem;
-        padding: 20px;
-    }
+    footer { font-size: 1.2rem; padding: 20px; }
 }
 
 @media (max-width: 480px) {
-    header h1 { font-size: 2.6rem; }
-    .pdf-container iframe { transform: scale(1.25); }
+    header h1 { font-size: 2.8rem; }
+    .pdf-container iframe { transform: scale(1.45); }
 }
